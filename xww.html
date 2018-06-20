@@ -1,0 +1,606 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+ *{
+ 	box-sizing: border-box;
+ 	margin: 0;
+ 	padding: 0;
+ }
+	body{
+		margin: 0;
+		padding: 0;
+	}
+	ul{
+		list-style-type: none;
+	}
+	#header-top {
+    padding: 8px 0;
+    background: red;
+    color: #fff;
+    font-size: 14px;
+    border-bottom: 1px solid #989AA1;
+    
+	}
+#header-top p {
+    margin: 0 auto;
+    width: 1200px;
+    line-height: 22px;
+    text-align: center;
+}
+.header {
+    height: 32.8px;
+    line-height: 33px;
+    background: #f5f5f5;
+    border-bottom: 1px solid #dfdfdd;
+    font-size: 12px;
+    color: #666d71;
+    xfloat: left;
+}
+
+.clearfix {
+    clear:both;
+    width: auto;
+    height: 32.8px;
+
+}
+.clearfix ul {
+   float: left;
+}
+.fr {
+	float: right;
+}
+.fr li {
+    float: right;
+	margin: 0;
+	padding: 0;
+	max-height: 20px;
+
+}
+.fs{
+	float: left;
+	width: 126px;
+	
+}
+.fs-1{
+	
+}
+.f1 {
+    color: #666d71;
+    padding: 0 3px;
+    z-index: 55;
+    display: inline-block;
+}
+.f2 {
+    float: left;
+}
+.login,.register{
+    margin-left: 10px;
+}
+
+.color-blue {
+    display: inline-block;
+    margin-left: -4px;
+    color:#23a5f9;
+}
+
+.index-Hlogo {
+    margin: 26px 0;
+}
+.index-Hlogo a{
+    display: block;
+    width: 380px;
+    height: 54px;
+    background: url(../../img/mybg.png) no-repeat;
+}
+
+.index-Hsearch {
+    margin-top: 22px;
+    margin-left: 60px;
+}
+.search-box{
+    position: relative;
+    width: 425px;
+    height: 44px;
+}
+.input-box{
+    position: absolute;
+    left: 0;
+    right: 90px;
+    padding-left: 10px;
+    padding-right: 38px;
+    height: 40px;
+    border: 2px solid #37a3ff;
+}
+.hsearch-text{
+    width: 100%;
+    height: 36px;
+    border: none;
+    padding: 0;
+}
+.hsearch-but{
+    position: absolute;
+    right: 1px;
+    top: 0px;
+    width: 90px;
+    line-height: 40px;
+    height:40px;
+    text-align: center;
+    background: #37a3ff;
+    font-size: 16px;
+    color: #fff;
+    padding: 2px 0;
+    cursor: pointer;
+    border-radius: 0;
+}
+.index-Hshopping{
+    position: relative;
+}
+.button {
+    display: block;
+    width: 130px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 3px;
+    background: #f5f5f5;
+    color: #666d71;
+    margin-top: 20px;
+    border: 1px solid #eee;
+    font-size: 14px;
+}
+.button b{
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: bold;
+    margin-left: 25px;
+}
+.index-Hshopping span{
+    position: absolute;
+    right: 25px;
+    top: 12px;
+    border-radius: 100px;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+    font-size: 12px;
+    background: #fe4979;
+    color: #fff;
+}
+.search-word{
+    margin-top: 5px;
+}
+.search-word > a {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+    color: #666d71;
+    transition: color .25s ease-in-out;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+.nav-content{
+    width: 1200px;
+    margin: 0 auto;
+    clear: both;
+}
+.commonnav-bg h2{
+    width: 190px;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 20px;
+    background: #37a3ff;
+    font-size: 18px;
+    color: #fff;
+    position: relative;
+}
+.nav-content h2{
+    margin-left: 0;
+    width: 210px;
+    text-align: center;
+}
+ .goods {
+    display: block;
+    cursor: pointer;
+    color: #fff;
+}
+ .nav-list {
+     width: 210px;
+     height: auto;
+     min-height: 380px;
+     position: absolute;
+     left: 0;
+     top: 40px;
+     background: #455054;
+     display: none;
+     z-index: 9999;
+ }
+ .nav-list li {
+    position: relative;
+    width: 190px;
+    height: auto;
+    padding: 0 10px;
+    font-size: 14px;
+}
+ .list-main {
+     width: 100%;
+     height: 100%;
+     border-top: 1px solid #4e595d;
+ }
+
+.list-main h6 {
+    width: 100%;
+    height: auto;
+    line-height: 32px;
+    color: #fff;
+    padding-top: 10px;
+    font-size: 16px;
+}
+.list-main p {
+    line-height: 22px;
+    padding: 6px 0 6px 8px;
+}
+
+ .list-main p a {
+     padding: 0 4px;
+     font-size: 12px;
+     color: #e6e6e6;
+     transition: color .25s ease-in-out;
+     white-space: nowrap;
+ }
+.big-nav {
+    width: 980px;
+    height: 24px;
+    margin-top: 3px;
+}
+.big-nav li {
+    font-size: 16px;
+    margin-left: 50px;
+    position: relative;
+}
+</style>
+<body>
+	<header>
+    <div id="header-top">
+        <p>
+            <strong>重大通知：</strong>
+            小租客户退换机地址新增加武汉区和深圳区，请各位客户按照退换机提示地址寄回设备，
+            <a href="#">详细请点击</a>
+        </p>
+    </div>
+    <div class="header">
+        <div class="clearfix">
+            <ul class="fl">
+                <li class="f1">您好，欢迎来到小租</li>
+                <li class="f1">
+                    <a href="#" class="login">登录</a>
+                    <a href="#" class="register">注册</a>
+                </li>
+            </ul>
+            <div class="fr">
+            	<ul>
+	                <li class="f1">
+	                    销售热线：
+	                    <span class="color-blue">400-810-9528</span>
+	                </li>
+	                <li class="f1">
+	                    客服热线：
+	                    <span class="color-blue">400-886-9528</span>
+	                </li>
+	                <li class="f1">
+	                    <a href="/help">
+	                        服务中心
+	                    </a>
+	                </li>
+            	</ul>
+            </div>  
+        </div>
+            <div class="dl-1">
+            	<div class="header-index clearfix">
+                <div class="index-Hlogo f2">
+                    <a href="#/homeIndex"></a>
+                </div>
+                <div class="index-Hsearch f2">
+                    <div class="clearfix search-box">
+                        <div class="input-box">
+                            <input type="text" placeholder="免押金租电脑" class="hsearch-text" value="" />
+                        </div>
+                        <button class="hsearch-but">
+                            搜索
+                        </button>
+                    </div>
+                    <p class="search-word">
+                        <a href="#">T420</a><a href="#">T420</a><a href="#">T420</a><a href="#">T420</a><a href="#">T420</a>
+                    </p>
+                </div>
+                <div class="index-Hshopping fr">
+                    <a href="#" class="button" target="_blank">
+                        购物车
+                        <b>&gt;</b>
+                    </a>
+                    <span>0</span>
+                </div>
+            </div>
+        </div>
+            
+        
+    </div>
+</header>
+
+	<div class="commonnav-bg clearfix">
+    <div class="nav-content">
+        <h2 class="f2">
+            <a class="goods" style="cursor:default;">
+                商品分类
+            </a>
+            <ul class="nav-list">
+                <li>
+                    <div class="list-main">
+                        <h6>
+                            办公电脑
+                        </h6>
+                        <p>
+                            <a href="#" >笔记本</a>
+                            <a href="#">台式机</a>
+                            <a href="#">一体机</a>
+                            <a href="#">主机</a>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="list-main">
+                        <h6>
+                            办公外设
+                        </h6>
+                        <p>
+                            <a href="#">投影仪</a>
+                            <a href="#">显示器</a>
+                            <a href="#">平板</a>
+                            <a href="#">手机</a>
+                            <br />
+                            <a href="#">电视</a>
+                            <a href="#">配件</a>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="list-main">
+                        <h6>
+                            增值服务
+                        </h6>
+                        <p>
+                            <a href="#">无忧服务</a>
+                            <a href="#">驻场服务</a>
+                            <a href="#">企业回收</a>
+                            <a href="#">计次上门服务</a>
+                            <a href="#">软件定制服务</a>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="list-main">
+                        <h6>
+                            办公服务
+                        </h6>
+                        <p>
+                            <a href="#">网络部署</a>
+                            <a href="#">服务器</a>
+                            <a href="#">工作站</a>
+                            <br />
+                            <a href="#">打印机</a>
+                            <a href="#">净化器</a>
+                            <a href="#">Office</a>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </h2>
+        <ul class="big-nav f2">
+            <li class="on" id="index_item">
+                <a href="#">首页</a>
+            </li>
+            <li  id="preferen">
+                <a href="#">限量特惠</a>
+                </i>
+            </li>
+            <li  id="czth">
+                <a href="#">我要短租</a>
+            </li>
+            <li  id="valueAddedService">
+                <a href="#">增值服务</a>
+            </li>
+            <li  id="equipmentRecycle">
+                <a href="#">企业回收</a>
+            </li>
+            <li  id="khs">
+                <a href="#">客户说</a>
+            </li>
+            <li id="saas">
+                <a href="#">固定资产管理</a>
+            </li>
+            <li  id="lenovo2">
+                <a href="#">联想租赁季</a>
+            </li>
+
+        </ul>
+    </div>
+</div>
+
+<div id="content">
+    <div class="homeBanner">
+        <div class="product-image">
+            <div id="myCarousel-2" class="carousel slide" data-smart-ride-carousel>
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel-2" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel-2" data-slide-to="1" class=""></li>
+                    <li data-target="#myCarousel-2" data-slide-to="2" class=""></li>
+                </ol>
+                <div class="carousel-inner">
+                    <!-- Slide 1 -->
+                    <div class="item active">
+                        <img reset-img="banner1" ng-src="{{wwwhome.headimg1}}" alt="">
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="item">
+                        <img reset-img="banner2" ng-src="{{wwwhome.headimg2}}" alt="">
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="item">
+                        <img reset-img="banner3" ng-src="{{wwwhome.headimg3}}" alt="">
+                    </div>
+                </div>
+                <a class="left carousel-control" href="#myCarousel-2" ng-non-bindable  data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"></span> </a>
+                <a class="right carousel-control" href="#myCarousel-2" ng-non-bindable data-slide="next"> <span class="glyphicon glyphicon-chevron-right"></span> </a>
+            </div>
+        </div>
+    </div>
+    <ul  class="homeLabel clearFloat">
+        <li>押金减免</li>
+        <li>随租随还</li>
+        <li>一台起租</li>
+        <li>高性价比</li>
+        <li>售后无忧</li>
+    </ul>
+    <div class="homeNavList">
+        <!--分类一-->
+        <div class="homeNavList_item">
+            <h3 class="homeNavList_item_title clearFloat">
+                <span>{{class1[0].pmpIdPmpObj.title}}</span>
+                <span ng-click="lookMore()">查看更多 &gt;</span>
+            </h3>
+            <div class="homeNavList_item_content clearFloat">
+                <a href="" class="package_Img"><img  reset-img="" ng-src="{{class1[0].pmpIdPmpObj.img1}}" class="homeNavList_item_content-Img" alt=""></a>
+                <ul class="homeNavList_item_content-list">
+                    <li class="list_item" ng-repeat="obj in class1">
+                        <a href="#/ProductDetails/{{obj.id}}">
+                            <img class="item_Img" reset-img=""  ng-src="{{obj.productIdProductObj.img1}}" alt="">
+                            <h4  class="item_title">{{obj.productIdProductObj.title}}</h4>
+                            <h5  class="item_pirce">租金：{{obj.productIdProductObj.lowmonthprice}}/月</h5>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <!--分类二-->
+        <div class="homeNavList_item">
+            <h3 class="homeNavList_item_title clearFloat">
+                <span>{{class2[0].pmpIdPmpObj.title}}</span>
+                <span ng-click="lookMore()">查看更多 &gt;</span>
+            </h3>
+            <div class="homeNavList_item_content clearFloat">
+                <a href="" class="package_Img"><img  reset-img="" ng-src="{{class2[0].pmpIdPmpObj.img1}}" class="homeNavList_item_content-Img" alt=""></a>
+                <ul class="homeNavList_item_content-list">
+                    <li class="list_item" ng-repeat="obj in class2">
+                        <a href="#/ProductDetails/{{obj.id}}">
+                            <img class="item_Img" reset-img=""  ng-src="{{obj.productIdProductObj.img1}}" alt="">
+                            <h4  class="item_title">{{obj.productIdProductObj.title}}</h4>
+                            <h5  class="item_pirce">租金：{{obj.productIdProductObj.lowmonthprice}}/月</h5>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--分类三-->
+        <div class="homeNavList_item">
+            <h3 class="homeNavList_item_title clearFloat">
+                <span>{{class3[0].pmpIdPmpObj.title}}</span>
+                <span ng-click="lookMore()">查看更多 &gt;</span>
+            </h3>
+            <div class="homeNavList_item_content clearFloat">
+                <a href="" class="package_Img"><img  reset-img="" ng-src="{{class3[0].pmpIdPmpObj.img1}}" class="homeNavList_item_content-Img" alt=""></a>
+                <ul class="homeNavList_item_content-list">
+                    <li class="list_item" ng-repeat="obj in class3">
+                        <a href="#/ProductDetails/{{obj.id}}">
+                            <img class="item_Img" reset-img=""  ng-src="{{obj.productIdProductObj.img1}}" alt="">
+                            <h4  class="item_title">{{obj.productIdProductObj.title}}</h4>
+                            <h5  class="item_pirce">租金：{{obj.productIdProductObj.lowmonthprice}}/月</h5>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <div class="homeCooperation">
+        <h3 class="homeCooperation_title">合作伙伴</h3>
+        <ul class="homeCooperation_content clearFloat">
+            <li class="homeCooperation_content-item">
+                <img src="res/img/brand1.png" alt="">
+            </li>
+            <li class="homeCooperation_content-item">
+                <img src="res/img/brand2.png" alt="">
+            </li>
+            <li class="homeCooperation_content-item">
+                <img src="res/img/brand3.png" alt="">
+            </li>
+            <li class="homeCooperation_content-item">
+                <img src="res/img/brand4.png" alt="">
+            </li>
+            <li class="homeCooperation_content-item">
+                <img src="res/img/brand5.png" alt="">
+            </li>
+            <li class="homeCooperation_content-item">
+                <img src="res/img/brand6.png" alt="">
+            </li>
+            <li class="homeCooperation_content-item">
+                <img src="res/img/brand7.png" alt="">
+            </li>
+            <li class="homeCooperation_content-item">
+                <img src="res/img/brand8.png" alt="">
+            </li>
+            <li class="homeCooperation_content-item">
+                <img src="res/img/brand9.png" alt="">
+            </li>
+            <li class="homeCooperation_content-item">
+                <img src="res/img/brand10.png" alt="">
+            </li>
+            <li class="homeCooperation_content-item">
+                <img src="res/img/brand11.png" alt="">
+            </li>
+            <li class="homeCooperation_content-item">
+                <img src="res/img/brand12.png" alt="">
+            </li>
+            <li class="homeCooperation_content-item">
+                <img src="res/img/brand13.png" alt="">
+            </li>
+            <li class="homeCooperation_content-item">
+                <img src="res/img/brand14.png" alt="">
+            </li>
+        </ul>
+    </div>
+    <!--侧边导航栏-->
+    <ul class="view-rtNav">
+        <li ng-mouseenter="show1 = true" ng-mouseleave="show1 = false">
+            <img src="res/img/Side_p.png" alt="">
+            <div ng-class="['phoneBox',{animated:show1},{fadeInRight:show1}]"  ng-show="show1">
+                <h4>电话:</h4>
+                <p>0571-56258006</p>
+            </div>
+        </li >
+        <li ng-click="returnClick()"><img src="res/img/Side_r.png" alt=""></li>
+    </ul>
+    <!--<div  class="OpinionWin" ng-if="OpinionWin">-->
+        <!--<div ng-class="['OpinionWinContent',{animated:OpinionWin},{fadeInRight:OpinionWin}]" >-->
+            <!--<h4>意见反馈</h4>-->
+            <!--<textarea name="" id="" cols="30" rows="10" placeholder="请描述您出现此问题的场景" ng-model="obj.detail"></textarea>-->
+            <!--<h4>联系方式</h4>-->
+            <!--<input type="text" ng-model="obj.phone" placeholder="请填写您的联系方式">-->
+            <!--<button ng-click="saveSugg()">提交</button>-->
+            <!--<span class="glyphicon glyphicon-remove" ng-click="closeWin()"></span>-->
+        <!--</div>-->
+
+    <!--</div>-->
+</div>
+</body>
+</html>
